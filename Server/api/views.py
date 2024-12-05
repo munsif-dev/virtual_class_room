@@ -1,8 +1,11 @@
-from django.urls import path,include
+from django.shortcuts import render
 from rest_framework import generics
-from .models import User
-from .serializers import UserProfileSerializer
+from .serializers import RoomSerializer
+from .models import Room
 
-class UserList(generics.ListCreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserProfileSerializer
+# Create your views here.
+
+
+class RoomView(generics.ListAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
