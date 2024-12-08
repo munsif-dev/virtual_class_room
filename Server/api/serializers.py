@@ -6,9 +6,8 @@ class RoomSerializer(serializers.ModelSerializer):
         model = Room
         fields = ('id', 'code', 'host', 'guest_can_pause', 'votes_to_skip', 'created_at')
 
+
 class CreateRoomSerializer(serializers.ModelSerializer):
     class Meta:
-        model: Room
-        fields = ('guest_can_pause', 'votes_to_skip')
-
-        
+        model = Room  # Link this serializer to the Room model
+        fields = ['guest_can_pause', 'votes_to_skip']  # Specify fields to include
