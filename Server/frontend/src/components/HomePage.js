@@ -6,6 +6,9 @@ import JoinRoomPage from "./JoinRoomPage";
 export const HomePage = () => {
   return (
     <div>
+      <div>
+        <h1 className="text-lime-800">Home Page</h1>
+      </div>
       <Router>
         <Routes>
           <Route exact path="/" element={<p>Home Page</p>} />
